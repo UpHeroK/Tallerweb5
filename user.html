@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Usuario</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <script src="validaciones.js"> </script>
+    <script>
+        function mostrar()
+        {
+            var get = document.getElementById("rangoo").value;
+            document.getElementById("holiwiUwU").value = get;
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            Usuario
+        </a>
+    </nav>
+    <div class="container pt-5">
+        <div class="col-md-5" style="margin-left: 30%;">
+            <div class="card card-body">
+                <h5 class="card-title">Registrar Usuario</h5>
+                <form action="" id="form" onsubmit="return validar()">
+                    <div class="row">
+
+                        <div class="form-group">
+                            <p> Id user: <input  name="id_user" id="ids" type="number" value=""  /> </p>
+                            <p> Id País: <input name="id_p" id="idp" type="number" value="" /> </p>
+                            <p> Nombre: <input  name="nombre" id="name" type="text" value=""  /> </p>
+                            <div style="color: red;" id ="error1">
+                            </div>
+                            <p> Apellido: <input  name="apellido" id="lname" type="text" value="" /> </p>
+                            <div style="color: red;" id ="error2">
+                            </div>
+                            <p> Dirección <input  name="adress" id="adress" type="text" value=""  /> </p>
+                            <div style="color: red;" id ="error3">
+                            </div>
+                            <p> CCuser: <input  name="ccuser" id="ccuser"type="text" value=""  /> </p>
+                            <div style="color: red;" id ="error4">
+                            </div>
+                            <p> CCpasword: <input  name="ccp" id="ccpass" type="password"> </p>
+                            <div style="color: red;" id ="error5">
+                            </div>
+                            <p> Confirmar contraseña: <input  name="ccpa" id="ccpass2" type="password"> </p>
+                            <div style="color: red;" id ="error6">
+                            </div>
+                            <p> Email: <input  name="email" id="email" type="text" value=""  /> </p>
+                            <div style="color: red;" id ="error7">
+                            </div>
+                            <p> Télefono: <input  name="tel" id="tel" type="text" > </p>
+                            <p> Marca vehiculo:<br>
+                                <label><input type="radio" name="marca" value="mark1"> Tsuru</label><br>
+                                <label><input type="radio" name="marca" value="mark2"> Patico</label><br>
+                                <label><input type="radio" name="marca" value="mark3"> Audi</label></p>
+                            <p> Color vehiculo:<br>
+                                <label><input type="radio" name="color" value="col1"> Rojo</label><br>
+                                <label><input type="radio" name="color" value="col2"> Azul</label><br>
+                                <label><input type="radio" name="color" value="col3"> Negro</label></p>
+                            <p> Estilo vehiculo:<br>
+                                <label><input type="radio" name="style" value="estilo1"> Deportivo</label><br>
+                                <label><input type="radio" name="style" value="estilo2"> Ciudad</label><br>
+                                <label><input type="radio" name="style" value="estilo3"> Todo Terreno</label></p>
+                            <p> Modelo vehiculo:<br>
+                                <label><input type="radio" name="model" value="año1"> 2020</label><br>
+                                <label><input type="radio" name="model" value="año2"> 2021</label><br>
+                                <label><input type="radio" name="model" value="año3"> 2022</label></p>
+                            <label>Valor:</label>
+                            <input type="range" min="100" max="10000" id="rangoo" onchange="mostrar()">
+                            <input type="text" id="holiwiUwU"/>
+                            
+
+                            <input class="btn btn-outline-info" style="margin-left: 40%;" type="submit" value="Enviar">
+                            
+                        </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+
+</html>
